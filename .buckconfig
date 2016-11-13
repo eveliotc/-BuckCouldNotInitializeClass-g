@@ -1,0 +1,4 @@
+[project]
+    allow_symlinks = forbid
+    ignore = .git, .idea, .gradle
+    temp_files = ^#.*#$, .*~$, .*\.swp$
