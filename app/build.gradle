@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 24
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "evel.io.buckcouldnotinitializeclass"
@@ -12,23 +12,13 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        debug {}
-        release {
-            storeFile file('/Users/eveliotarazona/.android/debug.keystore')
-            storePassword "sup3rs3cur3"
-            keyAlias 'somekey'
-            keyPassword "1234"
-        }
-    }
-
     buildTypes {
 
         debug {}
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 }
